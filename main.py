@@ -42,7 +42,7 @@ def print_grafo(grafo):
     for v,i in indice_ciudad.items():
         print(v + ' ', end='')
         for j in range(len(grafo)):
-            print(grafo[i][j]+" ", end='')
+            print(grafo[i][j], end='')
         print(' ')
 
 def leer_rutas(archivo):
@@ -53,9 +53,6 @@ def leer_rutas(archivo):
             origen = row[0]
             destino = row[1]
             costo = row[2]
-            print(origen)
-            print(destino)
-            print(costo)
             grafo[indice_ciudad[origen]][indice_ciudad[destino]] = costo
             grafo[indice_ciudad[destino]][indice_ciudad[origen]] = costo
             cuenta += 1
