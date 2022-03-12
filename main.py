@@ -15,6 +15,14 @@ def menu():
     leer_rutas("Datos Rutas.csv")
     print_grafo(grafo)
     print("Bienvenido a Metro Travel.")
+    origen = input("Ingrese la ciudad de origen: ")
+    destino = input("Ingrese la ciudad de destino: ")
+    visa = input("¿Cuenta con Visa para los paises del Caribe?: ")
+    algoritmo = input("¿Desea la ruta más barata o la que tiene menos escalas?: ")
+
+def caminoMenosEscalas(origen, destino):
+    pass
+
 
 def leer_ciudades(archivo):
     with open(archivo) as csv_file:
