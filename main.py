@@ -149,7 +149,7 @@ def camino_corto(origen, destino, visa):
         for arista in listaArista:
             G.add_edge(arista[0], arista[1], weight=int(arista[2]))
         pos = nx.planar_layout(G)
-        dj = nx.shortest_path(G, origen.codigo, destino.codigo, weight='weight')
+        dj = nx.shortest_path(G, origen.codigo, destino.codigo)
         dj_edges = [(dj[i], dj[i + 1]) for i in range(len(dj) - 1)]
         edge_color_list = ["black"] * len(G.edges)
         for i, edge in enumerate(G.edges()):
@@ -178,7 +178,7 @@ def camino_corto(origen, destino, visa):
             G.add_edge(arista[0], arista[1], weight=int(arista[2]))
 
         pos = nx.planar_layout(G)
-        dj = nx.shortest_path(G, origen.codigo, destino.codigo, weight='weight')
+        dj = nx.shortest_path(G, origen.codigo, destino.codigo)
         dj_edges = [(dj[i], dj[i + 1]) for i in range(len(dj) - 1)]
         edge_color_list = ["black"] * len(G.edges)
         for i, edge in enumerate(G.edges()):
